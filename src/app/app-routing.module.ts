@@ -14,12 +14,12 @@ const routes: Routes = [
     component: SigninPageComponent,
   },
   {
-    path: 'game',
+    path: 'home',
     component: MainPageComponent,
   },
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
 ];

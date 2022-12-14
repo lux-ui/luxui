@@ -1,0 +1,53 @@
+@import "src/app/common/styles/common.scss";
+
+.navbar {
+  background: $dark-blue;
+  padding: 1rem 0;
+
+  .navbar-content {
+    @include container-wrapper;
+    display: flex;
+    justify-content: space-between;
+
+    .navbar__logo {
+      font-size: 28px;
+      color: $white;
+
+      sup {
+        color: darken($light-blue, 15%);
+        border: 2px solid $light-blue;
+        font-size: 18px;
+        padding: 0 0.25rem;
+        margin-left: 0.25rem;
+        border-radius: 5px;
+      }
+    }
+
+    .navbar-nav {
+      list-style-type: none;
+      display: flex;
+      gap: 2.5rem;
+
+      @media screen and (max-width: 900px) {
+        gap: 1.5rem;
+      }
+
+      .navbar-nav__element {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          color: $white;
+          font-weight: 700;
+          text-decoration: none;
+          transition: all 0.2s ease-out;
+
+          &:hover {
+            color: $light-blue;
+          }
+        }
+      }
+    }
+  }
+}
