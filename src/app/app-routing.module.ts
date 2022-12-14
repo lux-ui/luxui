@@ -14,13 +14,8 @@ const routes: Routes = [
     component: SigninPageComponent,
   },
   {
-    path: 'home',
-    component: MainPageComponent,
-  },
-  {
     path: '',
-    redirectTo: '/home',
-    pathMatch: 'full',
+    component: MainPageComponent,
   },
 ];
 
