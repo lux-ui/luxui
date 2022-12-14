@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SigninPageComponent } from './signin-page/signin-page.component';
-import { NavbarComponent } from './common/components/navbar/navbar.component';
 import { ComponentsPageComponent } from './components-page/components-page.component';
+import { DocumentationModule } from './documentation/documentation.module';
+import { SharedModule } from './common/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,10 +16,9 @@ import { ComponentsPageComponent } from './components-page/components-page.compo
     MainPageComponent,
     LoginPageComponent,
     SigninPageComponent,
-    NavbarComponent,
     ComponentsPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, DocumentationModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -12,6 +12,7 @@
     .navbar__logo {
       font-size: 28px;
       color: $white;
+      cursor: pointer;
 
       sup {
         color: darken($light-blue, 15%);

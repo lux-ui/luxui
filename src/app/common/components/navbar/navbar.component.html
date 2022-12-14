@@ -1,10 +1,16 @@
 <nav class="navbar">
   <div class="navbar-content">
-    <h3 class="navbar__logo">Lux<sup>UI</sup></h3>
+    <h3 class="navbar__logo" [routerLink]="'/'">Lux<sup>UI</sup></h3>
     <ul class="navbar-nav">
-      <li class="navbar-nav__element"><a href="/">Components</a></li>
-      <li class="navbar-nav__element"><a href="/">Templates</a></li>
-      <li class="navbar-nav__element"><a href="/">Documentation</a></li>
+      <li class="navbar-nav__element">
+        <a [routerLink]="'/components'">Components</a>
+      </li>
+      <li class="navbar-nav__element">
+        <a [routerLink]="'/templates'">Templates</a>
+      </li>
+      <li class="navbar-nav__element">
+        <a [routerLink]="'/documentation'">Documentation</a>
+      </li>
     </ul>
   </div>
 </nav>

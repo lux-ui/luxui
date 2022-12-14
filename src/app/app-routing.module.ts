@@ -1,3 +1,4 @@
+import { DocumentationRoutingModule } from './documentation/documentation-routing.module';
 import { SigninPageComponent } from './signin-page/signin-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,11 @@ const routes: Routes = [
     path: 'sign-in',
     component: SigninPageComponent,
   },
+  {
+    path: 'documentation',
+    loadChildren: () => DocumentationRoutingModule,
+  },
+
   {
     path: '',
     component: MainPageComponent,
