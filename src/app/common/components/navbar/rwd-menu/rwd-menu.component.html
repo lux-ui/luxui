@@ -1,0 +1,16 @@
+<nav [class]="openModal ? 'root' : 'root-inactive'">
+  <span class="menu-icon" (click)="close()"
+    ><img src="assets/menu.svg" alt="menu"
+  /></span>
+  <ul class="nav">
+    <li class="nav__element">
+      <a [routerLink]="'/components'">Components</a>
+    </li>
+    <li class="nav__element">
+      <a [routerLink]="'/templates'">Templates</a>
+    </li>
+    <li class="nav__element">
+      <a [routerLink]="'/documentation'">Documentation</a>
+    </li>
+  </ul>
+</nav>

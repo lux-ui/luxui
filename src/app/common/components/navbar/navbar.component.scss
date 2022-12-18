@@ -4,10 +4,15 @@
   background: $dark-blue;
   padding: 1rem 0;
 
+  @media screen and (max-width: 600px) {
+    padding: 0.5rem 0;
+  }
+
   .navbar-content {
     @include container-wrapper;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .navbar__logo {
       font-size: 28px;
@@ -33,6 +38,10 @@
         gap: 1.5rem;
       }
 
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+
       .navbar-nav__element {
         display: flex;
         align-items: center;
@@ -49,6 +58,13 @@
           }
         }
       }
+    }
+  }
+
+  .navbar__menu-btn {
+    cursor: pointer;
+    @media screen and (min-width: 600px) {
+      display: none;
     }
   }
 }

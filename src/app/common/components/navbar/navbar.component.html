@@ -12,5 +12,12 @@
         <a [routerLink]="'/documentation'">Documentation</a>
       </li>
     </ul>
+    <span class="navbar__menu-btn" (click)="toggleModal(true)">
+      <img src="assets/menu.svg" alt="menu" />
+    </span>
   </div>
 </nav>
+<app-rwd-menu
+  (open)="toggleModal($event)"
+  [openModal]="openModal"
+></app-rwd-menu>
