@@ -1,3 +1,4 @@
+import { PrimaryButtonComponent } from './common/components/primary-button/primary-button.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -17,6 +18,7 @@ import { SharedModule } from './common/shared.module';
     LoginPageComponent,
     SigninPageComponent,
     ComponentsPageComponent,
+    PrimaryButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, DocumentationModule, SharedModule],
   providers: [],

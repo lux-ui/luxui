@@ -1,7 +1,7 @@
-@import "src/app/common/styles/common.scss";
+@import "src/app/luxui/assets/styles/main.scss";
 
 .navbar {
-  background: $dark-blue;
+  background: $color-primary-500;
   padding: 1rem 0;
 
   @media screen and (max-width: 600px) {
@@ -16,12 +16,12 @@
 
     .navbar__logo {
       font-size: 28px;
-      color: $white;
+      color: $color-gray-100;
       cursor: pointer;
 
       sup {
-        color: darken($light-blue, 15%);
-        border: 2px solid $light-blue;
+        color: darken($color-secondary-500, 15%);
+        border: 2px solid $color-secondary-500;
         font-size: 18px;
         padding: 0 0.25rem;
         margin-left: 0.25rem;
@@ -48,13 +48,13 @@
         justify-content: center;
 
         a {
-          color: $white;
+          color: $color-gray-100;
           font-weight: 700;
           text-decoration: none;
           transition: all 0.2s ease-out;
 
           &:hover {
-            color: $light-blue;
+            color: $color-secondary-500;
           }
         }
       }

@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "./app/common/styles/common.scss";
+@import "./app/luxui/assets/styles/main.scss";
 * {
   margin: 0;
   padding: 0;
@@ -8,5 +8,5 @@
 
 body {
   font-family: $primary-font;
-  background: $white;
+  background: $color-gray-100;
 }

@@ -1,0 +1,41 @@
+@import "src/app/luxui/assets/styles/main.scss";
+
+main {
+  background: lighten($color-primary-500, 5%);
+
+  .hero {
+    width: 100%;
+    height: calc(100vh - 67px);
+    display: flex;
+    align-items: center;
+
+    @include container-wrapper;
+
+    .hero__content {
+      width: 650px;
+      color: $color-gray-100;
+      margin-bottom: 15rem;
+      display: grid;
+      gap: 0.5rem;
+
+      & span {
+        color: darken($color-primary-500, 10%);
+        font-weight: bold;
+      }
+
+      & h1 {
+        font-size: 2.75rem;
+      }
+
+      & p {
+        font-size: 1.1rem;
+      }
+
+      .hero-action {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

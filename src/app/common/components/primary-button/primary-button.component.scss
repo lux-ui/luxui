@@ -1,0 +1,15 @@
+@import "src/app/luxui/assets/styles/main.scss";
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  border: none;
+  background: $color-error-500;
+  color: $color-gray-100;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($color-error-500, 3%);
+  }
+}
