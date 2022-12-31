@@ -1,0 +1,42 @@
+@import "src/app/luxui/assets/styles/main.scss";
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+
+  li {
+    list-style: none;
+    min-width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+      & button {
+        background: $color-secondary-900;
+        color: #fff;
+      }
+    }
+
+    & button {
+      border-radius: 4px;
+      font-size: 18px;
+      color: $color-primary-500;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      padding: 2px;
+
+      &:hover {
+        background: $color-secondary-300;
+      }
+
+      &:active {
+        color: $color-primary-900;
+        filter: drop-shadow(2px 2px 5px $color-secondary-300);
+      }
+    }
+  }
+}

@@ -1,40 +1,52 @@
 <app-navbar></app-navbar>
-<p class="p1">documentation-page works!</p>
-<nav>
-  <ul>
-    <li>
-      Settings
-      <ol>
-        <li>
-          <a routerLink="/documentation/settings/colors">Colors</a>
-        </li>
-        <li>
-          <a routerLink="/documentation/settings/spacing">Spacing</a>
-        </li>
-        <li>
-          <a routerLink="/documentation/settings/typography">Typography</a>
-        </li>
-      </ol>
-    </li>
-    <li>
-      Elements
-      <ol>
-        <li>
-          <a routerLink="/documentation/elements/buttons">Buttons</a>
-        </li>
-      </ol>
-    </li>
-    <li>
-      UI
-      <ol>
-        <li>
-          <a routerLink="/documentation/ui/pagination">Pagination</a>
-        </li>
-        <li>
-          <a routerLink="/documentation/ui/tooltip">Tooltip</a>
-        </li>
-      </ol>
-    </li>
-  </ul>
-</nav>
-<router-outlet></router-outlet>
+<main>
+  <nav>
+    <ul>
+      <li>
+        Settings
+        <ol>
+          <li>
+            <a routerLink="/documentation/settings/colors">Colors</a>
+          </li>
+          <li>
+            <a routerLink="/documentation/settings/spacing">Spacing</a>
+          </li>
+          <li>
+            <a routerLink="/documentation/settings/typography">Typography</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        Elements
+        <ol>
+          <li>
+            <a routerLink="/documentation/elements/buttons">Buttons</a>
+          </li>
+          <li>
+            <a routerLink="/documentation/elements/links">Links</a>
+          </li>
+          <li>
+            <a routerLink="/documentation/elements/icon-buttons"
+              >Icon Buttons</a
+            >
+          </li>
+        </ol>
+      </li>
+      <li>
+        UI
+        <ol>
+          <li>
+            <a routerLink="/documentation/ui/pagination">Pagination</a>
+          </li>
+          <li>
+            <a routerLink="/documentation/ui/tooltip">Tooltip</a>
+          </li>
+          <li>
+            <a routerLink="/documentation/ui/menu">Menu</a>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</main>

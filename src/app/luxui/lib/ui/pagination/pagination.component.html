@@ -1,0 +1,54 @@
+<nav class="m-64">
+  <ul class="pagination">
+    <li class="page-item">
+      <button class="page-link" (click)="changePage(1)">
+        <span aria-hidden="true">&laquo;</span>
+      </button>
+    </li>
+    <li class="page-item">
+      <button class="page-link" (click)="changePage(lxCurrentPage - 1)">
+        <span aria-hidden="true"><</span>
+      </button>
+    </li>
+    <li
+      [class]="page === lxCurrentPage ? 'page-item active' : 'page-item'"
+      *ngFor="let page of totalPages"
+      [ngSwitch]="paginationStatus"
+    >
+      <ng-container *ngSwitchCase="'at-start'">
+        <button class="page-link" (click)="changePage(page)" *ngIf="page <= 5">
+          {{ page }}
+        </button>
+        <span *ngIf="page === 6">...</span>
+      </ng-container>
+      <ng-container *ngSwitchCase="'in-middle'">
+        <button
+          class="page-link"
+          (click)="changePage(page)"
+          *ngIf="page >= lxCurrentPage - 2 && page <= lxCurrentPage + 2"
+        >
+          {{ page }}
+        </button>
+        <span *ngIf="page < lxCurrentPage - 2 || page > lxCurrentPage + 2"
+          >...</span
+        >
+      </ng-container>
+      <ng-container *ngSwitchCase="'at-end'">
+        <button class="page-link" (click)="changePage(page)" *ngIf="page > 5">
+          {{ page }}
+        </button>
+        <span *ngIf="page <= 5">...</span>
+      </ng-container>
+    </li>
+    <li class="page-item">
+      <button class="page-link" (click)="changePage(lxCurrentPage + 1)">
+        <span aria-hidden="true">></span>
+      </button>
+    </li>
+    <li class="page-item">
+      <button class="page-link" (click)="changePage(maxPage)">
+        <span aria-hidden="true">&raquo;</span>
+      </button>
+    </li>
+  </ul>
+</nav>

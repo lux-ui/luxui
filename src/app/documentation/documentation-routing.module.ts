@@ -1,6 +1,9 @@
-import { ButtonsComponent } from './elements/pages/buttons/buttons.component';
-import { TooltipComponent } from './ui/pages/tooltip/tooltip.component';
-import { PaginationComponent } from './ui/pages/pagination/pagination.component';
+import { IconButtonsPageComponent } from './elements/icon-buttons-page/icon-buttons-page.component';
+import { ButtonsPageComponent } from './elements/pages/buttons-page/buttons-page.component';
+import { LinksPageComponent } from './elements/pages/links-page/links-page.component';
+import { TooltipPageComponent } from './ui/pages/tooltip-page/tooltip-page.component';
+import { MenuPageComponent } from './ui/pages/menu-page/menu-page.component';
+import { PaginationPageComponent } from './ui/pages/pagination-page/pagination-page.component';
 import { TypographyComponent } from './settings/pages/typography/typography.component';
 import { SpacingComponent } from './settings/pages/spacing/spacing.component';
 import { ColorsComponent } from './settings/pages/colors/colors.component';
@@ -16,9 +19,12 @@ const routes: Routes = [
       { path: 'settings/colors', component: ColorsComponent },
       { path: 'settings/spacing', component: SpacingComponent },
       { path: 'settings/typography', component: TypographyComponent },
-      { path: 'ui/pagination', component: PaginationComponent },
-      { path: 'ui/tooltip', component: TooltipComponent },
-      { path: 'elements/buttons', component: ButtonsComponent },
+      { path: 'ui/pagination', component: PaginationPageComponent },
+      { path: 'ui/tooltip', component: TooltipPageComponent },
+      { path: 'ui/menu', component: MenuPageComponent },
+      { path: 'elements/links', component: LinksPageComponent },
+      { path: 'elements/buttons', component: ButtonsPageComponent },
+      { path: 'elements/icon-buttons', component: IconButtonsPageComponent },
     ],
   },
 ];

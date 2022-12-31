@@ -1,0 +1,346 @@
+@import "../mixins/buttons";
+@import "../mixins/spinner";
+@import "../settings/colors";
+@import "../settings/spacing";
+@import "../settings/typography";
+
+//a.button,
+//button {
+//  all: unset;
+//  @include base-button();
+//}
+//
+//.button {
+//  text-transform: uppercase;
+//  padding: 12px 32px;
+//  border-radius: 40px;
+//  font-weight: $font-weight-semi-bold;
+//
+//  @extend .t1;
+//
+//  &.primary {
+//    @include button(
+//        $color-blue-900,
+//        $color-gray-100,
+//        $color-blue-700,
+//        $color-blue-100,
+//        $color-blue-700,
+//        $color-blue-100,
+//        $color-blue-700,
+//        $color-blue-700,
+//        $color-blue-900,
+//        $color-gray-100,
+//        $color-blue-900,
+//        $color-gray-100,
+//    );
+//  }
+//
+//  &.secondary {
+//    @include button(
+//        $color-blue-300,
+//        $color-gray-900,
+//        $color-blue-400,
+//        $color-blue-900,
+//        $color-blue-400,
+//        $color-blue-900,
+//        $color-blue-400,
+//        $color-blue-400,
+//        $color-blue-500,
+//        $color-gray-900,
+//        $color-blue-300,
+//        $color-gray-900
+//    );
+//  }
+//
+//  &.tertiary {
+//    color: $color-blue-900;
+//
+//    &:hover {
+//      color: $color-blue-700;
+//    }
+//
+//    &:not(.disabled):not(.loading):focus-visible {
+//      color: $color-blue-900;
+//      @include outline;
+//    }
+//
+//    &:active {
+//      color: $color-blue-700 !important;
+//      filter: drop-shadow(0px 0px 6px $color-blue-400);
+//      outline: none !important;
+//    }
+//
+//    &.disabled,
+//    &:disabled {
+//      color: $color-gray-600 !important;
+//      filter: unset;
+//      @extend .not-allowed;
+//    }
+//
+//    &.loading {
+//      color: $color-blue-300 !important;
+//      @include spinner($color-blue-900);
+//    }
+//
+//    span {
+//      text-decoration: underline;
+//    }
+//  }
+//
+//  &.strong-action {
+//    @include button(
+//        $color-nok-400,
+//        $color-gray-100,
+//        $color-nok-500,
+//        $color-gray-100,
+//        $color-nok-500,
+//        $color-gray-100,
+//        $color-nok-500,
+//        $color-nok-500,
+//        $color-nok-400,
+//        $color-gray-100,
+//        $color-nok-400,
+//        $color-gray-100,
+//    );
+//  }
+//
+//  &.primary,
+//  &.secondary,
+//  &.strong-action {
+//    &.disabled,
+//    &:disabled {
+//      @include button-disabled();
+//    }
+//  }
+//
+//  i {
+//    margin-right: 8px;
+//  }
+//
+//  span {
+//    & + i {
+//      margin-left: 8px;
+//      margin-right: 0;
+//    }
+//  }
+//}
+//
+//.fab-button {
+//  justify-content: center;
+//  width: 44px;
+//  height: 44px;
+//  border-radius: 4px;
+//  position: relative;
+//
+//  &.light {
+//    @include fab-button(
+//        $color-gray-100,
+//        $color-blue-900,
+//        $color-blue-400,
+//        $color-blue-200,
+//        $color-blue-200,
+//        $color-blue-300,
+//        $color-gray-300,
+//        $color-gray-600,
+//    );
+//
+//    &:hover {
+//      i {
+//        color: $color-blue-500;
+//      }
+//    }
+//
+//    &:focus-visible {
+//      i {
+//        color: $color-blue-900;
+//      }
+//    }
+//  }
+//
+//  &.dark {
+//    @include fab-button(
+//        $color-blue-900,
+//        $color-gray-100,
+//        $color-blue-400,
+//        $color-blue-700,
+//        $color-blue-700,
+//        $color-blue-700,
+//        $color-gray-600,
+//        $color-gray-300,
+//    );
+//
+//    &:hover {
+//      &::before {
+//        background-color: $color-blue-700;
+//      }
+//    }
+//
+//    &:focus-visible {
+//      &::before {
+//        background-color: $color-blue-900;
+//      }
+//    }
+//
+//    &:active {
+//      &::before {
+//        background-color: $color-blue-700;
+//      }
+//    }
+//  }
+//}
+//
+//.icon-button {
+//  justify-content: center;
+//  width: 40px;
+//  height: 40px;
+//  border-radius: 100%;
+//  align-items: center;
+//  cursor: pointer;
+//  text-decoration: none;
+//
+//  i {
+//    color: $color-blue-700;
+//  }
+//
+//  &:hover {
+//    i {
+//      color: $color-blue-500;
+//    }
+//  }
+//
+//  &:active {
+//    outline: none !important;
+//
+//    i {
+//      filter: drop-shadow(0 0 2px $color-blue-500);
+//      color: $color-blue-500 !important;
+//    }
+//  }
+//
+//  &:focus-visible {
+//    @include outline(2px);
+//
+//    i {
+//      color: $color-blue-700;
+//    }
+//  }
+//
+//  &.blue-bg {
+//    @include icon-button(
+//        $color-blue-700,
+//        $color-blue-500,
+//        $color-blue-500,
+//        $color-blue-500,
+//        $color-blue-700,
+//    );
+//  }
+//
+//  &.white-bg {
+//    @include icon-button(
+//        $color-blue-500,
+//        $color-blue-700,
+//        $color-blue-700,
+//        $color-blue-700,
+//        $color-blue-500,
+//    );
+//  }
+//
+//  &.other-bg {
+//    @include icon-button(
+//        $color-blue-900,
+//        $color-blue-700,
+//        $color-blue-700,
+//        $color-blue-700,
+//        $color-blue-900,
+//    );
+//  }
+//
+//  &.strong-action-white {
+//    @include icon-button(
+//        $color-nok-400,
+//        $color-nok-500,
+//        $color-nok-500,
+//        $color-nok-500,
+//        $color-nok-400,
+//    );
+//  }
+//
+//  &.strong-action-other {
+//    @include icon-button(
+//        $color-nok-500,
+//        $color-nok-400,
+//        $color-nok-400,
+//        $color-nok-400,
+//        $color-nok-500,
+//    );
+//  }
+//
+//  &:disabled {
+//    @extend .not-allowed;
+//
+//    i {
+//      color: $color-gray-500 !important;
+//      filter: unset;
+//    }
+//
+//    &:active {
+//      outline: none !important;
+//
+//      i {
+//        filter: none !important;
+//        color: $color-gray-500 !important;
+//      }
+//    }
+//  }
+//}
+//
+//.link-button {
+//  @include base-button();
+//  color: $color-blue-700;
+//  padding: 4px 8px;
+//  text-decoration: none;
+//  outline: none;
+//  @extend .p1;
+//
+//  &.sm {
+//    @extend .p3;
+//
+//    i {
+//      font-size: 16px;
+//    }
+//  }
+//
+//  &.loading {
+//    @include spinner($color-blue-700, 16px);
+//    padding-right: 38px;
+//
+//    &::before {
+//      left: unset;
+//      right: 8px;
+//    }
+//  }
+//
+//  &:hover {
+//    background-color: $color-blue-200;
+//  }
+//
+//
+//  &:focus-visible {
+//    background-color: unset;
+//    @include outline(2px, -2px);
+//  }
+//
+//  &:active {
+//    background-color: $color-blue-300 !important;
+//    outline: none !important;
+//  }
+//
+//  span {
+//    text-decoration: underline;
+//    text-decoration-skip-ink: none;
+//  }
+//
+//  i {
+//    margin-right: 8px;
+//  }
+//}
