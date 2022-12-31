@@ -1,193 +1,192 @@
+@import "../settings/colors";
+@import "../shared/cursors";
+@import "../mixins/bg-color-text-color";
+@import "../mixins/outline";
 @import "../mixins/buttons";
 @import "../mixins/spinner";
-@import "../settings/colors";
-@import "../settings/spacing";
-@import "../settings/typography";
+a.button,
+button {
+  all: unset;
+  @include base-button();
+}
 
-//a.button,
-//button {
-//  all: unset;
-//  @include base-button();
-//}
-//
-//.button {
-//  text-transform: uppercase;
-//  padding: 12px 32px;
-//  border-radius: 40px;
-//  font-weight: $font-weight-semi-bold;
-//
-//  @extend .t1;
-//
-//  &.primary {
-//    @include button(
-//        $color-blue-900,
-//        $color-gray-100,
-//        $color-blue-700,
-//        $color-blue-100,
-//        $color-blue-700,
-//        $color-blue-100,
-//        $color-blue-700,
-//        $color-blue-700,
-//        $color-blue-900,
-//        $color-gray-100,
-//        $color-blue-900,
-//        $color-gray-100,
-//    );
-//  }
-//
-//  &.secondary {
-//    @include button(
-//        $color-blue-300,
-//        $color-gray-900,
-//        $color-blue-400,
-//        $color-blue-900,
-//        $color-blue-400,
-//        $color-blue-900,
-//        $color-blue-400,
-//        $color-blue-400,
-//        $color-blue-500,
-//        $color-gray-900,
-//        $color-blue-300,
-//        $color-gray-900
-//    );
-//  }
-//
-//  &.tertiary {
-//    color: $color-blue-900;
-//
-//    &:hover {
-//      color: $color-blue-700;
-//    }
-//
-//    &:not(.disabled):not(.loading):focus-visible {
-//      color: $color-blue-900;
-//      @include outline;
-//    }
-//
-//    &:active {
-//      color: $color-blue-700 !important;
-//      filter: drop-shadow(0px 0px 6px $color-blue-400);
-//      outline: none !important;
-//    }
-//
-//    &.disabled,
-//    &:disabled {
-//      color: $color-gray-600 !important;
-//      filter: unset;
-//      @extend .not-allowed;
-//    }
-//
-//    &.loading {
-//      color: $color-blue-300 !important;
-//      @include spinner($color-blue-900);
-//    }
-//
-//    span {
-//      text-decoration: underline;
-//    }
-//  }
-//
-//  &.strong-action {
-//    @include button(
-//        $color-nok-400,
-//        $color-gray-100,
-//        $color-nok-500,
-//        $color-gray-100,
-//        $color-nok-500,
-//        $color-gray-100,
-//        $color-nok-500,
-//        $color-nok-500,
-//        $color-nok-400,
-//        $color-gray-100,
-//        $color-nok-400,
-//        $color-gray-100,
-//    );
-//  }
-//
-//  &.primary,
-//  &.secondary,
-//  &.strong-action {
-//    &.disabled,
-//    &:disabled {
-//      @include button-disabled();
-//    }
-//  }
-//
-//  i {
-//    margin-right: 8px;
-//  }
-//
-//  span {
-//    & + i {
-//      margin-left: 8px;
-//      margin-right: 0;
-//    }
-//  }
-//}
-//
-//.fab-button {
-//  justify-content: center;
-//  width: 44px;
-//  height: 44px;
-//  border-radius: 4px;
-//  position: relative;
-//
-//  &.light {
-//    @include fab-button(
-//        $color-gray-100,
-//        $color-blue-900,
-//        $color-blue-400,
-//        $color-blue-200,
-//        $color-blue-200,
-//        $color-blue-300,
-//        $color-gray-300,
-//        $color-gray-600,
-//    );
-//
-//    &:hover {
-//      i {
-//        color: $color-blue-500;
-//      }
-//    }
-//
-//    &:focus-visible {
-//      i {
-//        color: $color-blue-900;
-//      }
-//    }
-//  }
-//
-//  &.dark {
-//    @include fab-button(
-//        $color-blue-900,
-//        $color-gray-100,
-//        $color-blue-400,
-//        $color-blue-700,
-//        $color-blue-700,
-//        $color-blue-700,
-//        $color-gray-600,
-//        $color-gray-300,
-//    );
-//
-//    &:hover {
-//      &::before {
-//        background-color: $color-blue-700;
-//      }
-//    }
-//
-//    &:focus-visible {
-//      &::before {
-//        background-color: $color-blue-900;
-//      }
-//    }
-//
-//    &:active {
-//      &::before {
-//        background-color: $color-blue-700;
-//      }
-//    }
-//  }
-//}
+.lx-button {
+  text-transform: uppercase;
+  padding: 12px 32px;
+  text-decoration: none;
+  @extend .cursor-pointer;
+  user-select: none;
+
+  @include button(
+    $color-secondary-100,
+    $color-primary-500,
+    $color-secondary-200,
+    $color-primary-800,
+    $color-secondary-300,
+    $color-primary-500,
+    $color-primary-900,
+    $color-gray-600,
+    $color-gray-500,
+    $color-secondary-100,
+    $color-secondary-400,
+    $color-secondary-100
+  );
+
+  &[size="small"] {
+    padding: 6px 16px;
+    font-size: 14px;
+  }
+
+  &[size="big"] {
+    padding: 14px 36px;
+    font-size: 18px;
+  }
+
+  &[type="primary"] {
+    @include button(
+      $color-primary-500,
+      $color-secondary-100,
+      $color-primary-700,
+      $color-secondary-200,
+      $color-primary-700,
+      $color-secondary-300,
+      $color-primary-700,
+      $color-primary-700,
+      $color-secondary-900,
+      $color-secondary-100,
+      $color-primary-900,
+      $color-secondary-100
+    );
+  }
+
+  &[type="border"] {
+    border: 2px solid $color-primary-400;
+
+    &:hover {
+      border: 2px solid $color-primary-900;
+      background: none;
+      color: $color-primary-300;
+    }
+
+    &:not(.disabled):not(.loading):focus-visible {
+      background: none;
+      color: $color-primary-900;
+      box-shadow: 0 0 6px $color-primary-100;
+    }
+
+    &:active {
+      background: none !important;
+      box-shadow: 0 0 6px $color-primary-100;
+      outline: none !important;
+    }
+
+    &[loading] {
+      @include bg-color-text-color(
+        $color-gray-500 !important,
+        $color-gray-600 !important
+      );
+      border: 2px solid $color-gray-600;
+      @include spinner($color-primary-100);
+    }
+
+    &:disabled {
+      @include disabled;
+      border: 2px solid $color-gray-600;
+    }
+  }
+
+  &[type="secondary"] {
+    @include button(
+      $color-secondary-600,
+      $color-secondary-100,
+      $color-secondary-500,
+      $color-secondary-200,
+      $color-secondary-700,
+      $color-secondary-300,
+      $color-primary-700,
+      $color-primary-700,
+      $color-secondary-900,
+      $color-secondary-100,
+      $color-secondary-900,
+      $color-secondary-100
+    );
+  }
+
+  //   i {
+  //     margin-right: 8px;
+  //   }
+
+  //   span {
+  //     & + i {
+  //       margin-left: 8px;
+  //       margin-right: 0;
+  //     }
+  //   }
+}
+
+// .fab-button {
+//   justify-content: center;
+//   width: 44px;
+//   height: 44px;
+//   border-radius: 4px;
+//   position: relative;
+
+//   &.light {
+//     @include fab-button(
+//       $color-gray-100,
+//       $color-blue-900,
+//       $color-blue-400,
+//       $color-blue-200,
+//       $color-blue-200,
+//       $color-blue-300,
+//       $color-gray-300,
+//       $color-gray-600
+//     );
+
+//     &:hover {
+//       i {
+//         color: $color-blue-500;
+//       }
+//     }
+
+//     &:focus-visible {
+//       i {
+//         color: $color-blue-900;
+//       }
+//     }
+//   }
+
+//   &.dark {
+//     @include fab-button(
+//       $color-blue-900,
+//       $color-gray-100,
+//       $color-blue-400,
+//       $color-blue-700,
+//       $color-blue-700,
+//       $color-blue-700,
+//       $color-gray-600,
+//       $color-gray-300
+//     );
+
+//     &:hover {
+//       &::before {
+//         background-color: $color-blue-700;
+//       }
+//     }
+
+//     &:focus-visible {
+//       &::before {
+//         background-color: $color-blue-900;
+//       }
+//     }
+
+//     &:active {
+//       &::before {
+//         background-color: $color-blue-700;
+//       }
+//     }
+//   }
+// }
 //
 //.icon-button {
 //  justify-content: center;

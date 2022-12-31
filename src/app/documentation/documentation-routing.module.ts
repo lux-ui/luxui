@@ -1,4 +1,4 @@
-import { IconButtonsPageComponent } from './elements/icon-buttons-page/icon-buttons-page.component';
+import { IconButtonsPageComponent } from './elements/pages/icon-buttons-page/icon-buttons-page.component';
 import { ButtonsPageComponent } from './elements/pages/buttons-page/buttons-page.component';
 import { LinksPageComponent } from './elements/pages/links-page/links-page.component';
 import { TooltipPageComponent } from './ui/pages/tooltip-page/tooltip-page.component';
