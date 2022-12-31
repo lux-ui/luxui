@@ -111,17 +111,6 @@ button {
       $color-secondary-100
     );
   }
-
-  //   i {
-  //     margin-right: 8px;
-  //   }
-
-  //   span {
-  //     & + i {
-  //       margin-left: 8px;
-  //       margin-right: 0;
-  //     }
-  //   }
 }
 
 // .fab-button {
@@ -188,111 +177,67 @@ button {
 //   }
 // }
 //
-//.icon-button {
-//  justify-content: center;
-//  width: 40px;
-//  height: 40px;
-//  border-radius: 100%;
-//  align-items: center;
-//  cursor: pointer;
-//  text-decoration: none;
-//
-//  i {
-//    color: $color-blue-700;
-//  }
-//
-//  &:hover {
-//    i {
-//      color: $color-blue-500;
-//    }
-//  }
-//
-//  &:active {
-//    outline: none !important;
-//
-//    i {
-//      filter: drop-shadow(0 0 2px $color-blue-500);
-//      color: $color-blue-500 !important;
-//    }
-//  }
-//
-//  &:focus-visible {
-//    @include outline(2px);
-//
-//    i {
-//      color: $color-blue-700;
-//    }
-//  }
-//
-//  &.blue-bg {
-//    @include icon-button(
-//        $color-blue-700,
-//        $color-blue-500,
-//        $color-blue-500,
-//        $color-blue-500,
-//        $color-blue-700,
-//    );
-//  }
-//
-//  &.white-bg {
-//    @include icon-button(
-//        $color-blue-500,
-//        $color-blue-700,
-//        $color-blue-700,
-//        $color-blue-700,
-//        $color-blue-500,
-//    );
-//  }
-//
-//  &.other-bg {
-//    @include icon-button(
-//        $color-blue-900,
-//        $color-blue-700,
-//        $color-blue-700,
-//        $color-blue-700,
-//        $color-blue-900,
-//    );
-//  }
-//
-//  &.strong-action-white {
-//    @include icon-button(
-//        $color-nok-400,
-//        $color-nok-500,
-//        $color-nok-500,
-//        $color-nok-500,
-//        $color-nok-400,
-//    );
-//  }
-//
-//  &.strong-action-other {
-//    @include icon-button(
-//        $color-nok-500,
-//        $color-nok-400,
-//        $color-nok-400,
-//        $color-nok-400,
-//        $color-nok-500,
-//    );
-//  }
-//
-//  &:disabled {
-//    @extend .not-allowed;
-//
-//    i {
-//      color: $color-gray-500 !important;
-//      filter: unset;
-//    }
-//
-//    &:active {
-//      outline: none !important;
-//
-//      i {
-//        filter: none !important;
-//        color: $color-gray-500 !important;
-//      }
-//    }
-//  }
-//}
-//
+.icon-button {
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+
+  svg,
+  i {
+    color: $color-primary-700;
+  }
+
+  &:hover {
+    svg,
+    i {
+      color: $color-primary-500;
+    }
+  }
+
+  &:active {
+    outline: none !important;
+
+    i,
+    svg {
+      filter: drop-shadow(0 0 2px $color-primary-500);
+      color: $color-primary-500 !important;
+    }
+  }
+
+  &:focus-visible {
+    @include outline(2px);
+
+    i,
+    svg {
+      color: $color-primary-700;
+    }
+  }
+
+  &:disabled {
+    @extend .not-allowed;
+
+    i,
+    svg {
+      color: $color-gray-100 !important;
+      filter: unset;
+    }
+
+    &:active {
+      outline: none !important;
+
+      i,
+      svg {
+        filter: none !important;
+        color: $color-gray-100 !important;
+      }
+    }
+  }
+}
+
 .lx-link {
   @include base-button();
   color: $color-primary-700;
