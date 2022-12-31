@@ -1,5 +1,7 @@
 main {
   display: flex;
+  min-height: calc(100vh - 73px);
+  overflow-x: hidden;
 }
 nav {
   width: 300px;

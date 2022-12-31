@@ -1,9 +1,8 @@
 <app-navbar></app-navbar>
 <main>
-  <nav>
-    <ul>
-      <li>
-        Settings
+  <app-menu>
+    <ul class="menu">
+      <app-menu-item text="Settings" [hasDropdown]="true">
         <ol>
           <li>
             <a routerLink="/documentation/settings/colors">Colors</a>
@@ -14,10 +13,9 @@
           <li>
             <a routerLink="/documentation/settings/typography">Typography</a>
           </li>
-        </ol>
-      </li>
-      <li>
-        Elements
+        </ol></app-menu-item
+      >
+      <app-menu-item text="Elements" [hasDropdown]="true">
         <ol>
           <li>
             <a routerLink="/documentation/elements/buttons">Buttons</a>
@@ -31,9 +29,8 @@
             >
           </li>
         </ol>
-      </li>
-      <li>
-        UI
+      </app-menu-item>
+      <app-menu-item text="UI" [hasDropdown]="true">
         <ol>
           <li>
             <a routerLink="/documentation/ui/pagination">Pagination</a>
@@ -45,8 +42,8 @@
             <a routerLink="/documentation/ui/menu">Menu</a>
           </li>
         </ol>
-      </li>
+      </app-menu-item>
     </ul>
-  </nav>
-  <router-outlet></router-outlet>
+  </app-menu>
+  <router-outlet class="m-32"></router-outlet>
 </main>

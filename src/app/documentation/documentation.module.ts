@@ -1,3 +1,4 @@
+import { MenuItemModule } from './../luxui/lib/ui/menu/menu-item/menu-item.module';
 import { MenuModule } from './../luxui/lib/ui/menu/menu.module';
 import { RouterModule } from '@angular/router';
 import { PaginationModule } from './../luxui/lib/ui/pagination/pagination.module';
@@ -36,6 +37,7 @@ import { IconButtonsPageComponent } from './elements/pages/icon-buttons-page/ico
     PaginationModule,
     MenuModule,
     RouterModule,
+    MenuItemModule,
   ],
 })
 export class DocumentationModule {}
