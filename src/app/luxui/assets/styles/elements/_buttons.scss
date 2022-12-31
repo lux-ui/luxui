@@ -134,11 +134,11 @@ button {
 //   &.light {
 //     @include fab-button(
 //       $color-gray-100,
-//       $color-blue-900,
-//       $color-blue-400,
-//       $color-blue-200,
-//       $color-blue-200,
-//       $color-blue-300,
+//       $color-primary-900,
+//       $color-primary-400,
+//       $color-primary-200,
+//       $color-primary-200,
+//       $color-primary-300,
 //       $color-gray-300,
 //       $color-gray-600
 //     );
@@ -293,53 +293,32 @@ button {
 //  }
 //}
 //
-//.link-button {
-//  @include base-button();
-//  color: $color-blue-700;
-//  padding: 4px 8px;
-//  text-decoration: none;
-//  outline: none;
-//  @extend .p1;
-//
-//  &.sm {
-//    @extend .p3;
-//
-//    i {
-//      font-size: 16px;
-//    }
-//  }
-//
-//  &.loading {
-//    @include spinner($color-blue-700, 16px);
-//    padding-right: 38px;
-//
-//    &::before {
-//      left: unset;
-//      right: 8px;
-//    }
-//  }
-//
-//  &:hover {
-//    background-color: $color-blue-200;
-//  }
-//
-//
-//  &:focus-visible {
-//    background-color: unset;
-//    @include outline(2px, -2px);
-//  }
-//
-//  &:active {
-//    background-color: $color-blue-300 !important;
-//    outline: none !important;
-//  }
-//
-//  span {
-//    text-decoration: underline;
-//    text-decoration-skip-ink: none;
-//  }
-//
-//  i {
-//    margin-right: 8px;
-//  }
-//}
+.lx-link {
+  @include base-button();
+  color: $color-primary-700;
+  padding: 4px 8px;
+
+  &[size="small"] {
+    padding: 2px 4px;
+    font-size: 14px;
+  }
+
+  &[size="big"] {
+    padding: 6px 10px;
+    font-size: 18px;
+  }
+
+  &:hover {
+    background-color: $color-secondary-300;
+  }
+
+  &:focus-visible {
+    background-color: unset;
+    @include outline(2px, -2px);
+  }
+
+  &:active {
+    background-color: $color-secondary-200 !important;
+    outline: none !important;
+  }
+}
