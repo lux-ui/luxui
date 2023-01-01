@@ -2,6 +2,7 @@ import {
   Component,
   EventEmitter,
   Input,
+  OnInit,
   Output,
   Renderer2,
 } from '@angular/core';
@@ -11,7 +12,7 @@ import {
   templateUrl: './rate.component.html',
   styleUrls: ['./rate.component.scss'],
 })
-export class RateComponent {
+export class RateComponent implements OnInit {
   @Input() lxCount: number = 5;
   @Input() stars: number = 0;
 
@@ -21,15 +22,17 @@ export class RateComponent {
   public value: number;
   private status = false;
 
-  constructor(private _renderer: Renderer2) {
+  constructor(private _renderer: Renderer2) {}
+
+  ngOnInit(): void {
     this.updateStarArray();
   }
 
   changeRate(stars: HTMLElement, rate: number): void {
     this.value = rate;
-    this.emitValue.emit(this.value + 1);
+    this.emitValue.emit(this.value);
     const starsArr = Array.from(stars.children);
-    for (const star of starsArr.slice(0, rate + 1)) {
+    for (const star of starsArr.slice(0, rate)) {
       this._renderer.setStyle(star.children[0], 'fill', '#ffcc00');
     }
 
@@ -39,7 +42,7 @@ export class RateComponent {
   public fillStars(stars: HTMLElement, i: number): void {
     this.status = true;
     const starsArr = Array.from(stars.children);
-    for (const star of starsArr.slice(0, i + 1)) {
+    for (const star of starsArr.slice(0, i)) {
       this._renderer.setStyle(star.children[0], 'fill', '#ffcc00');
     }
     for (const star of starsArr.slice(i + 1)) {
@@ -65,6 +68,8 @@ export class RateComponent {
   private updateStarArray(): void {
     this.starArray = Array(this.lxCount)
       .fill(0)
-      .map((_, i) => i);
+      .map((_, i) => i + 1);
+    this.value = this.stars;
+    this.emitValue.emit(this.value);
   }
 }
