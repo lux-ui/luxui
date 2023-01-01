@@ -46,6 +46,8 @@ a,
 
 .dropdown-menu {
   display: none;
+  background: lighten($color-primary-500, 3%);
+  border-radius: 5px;
   &.active {
     max-height: 300px;
     display: block;

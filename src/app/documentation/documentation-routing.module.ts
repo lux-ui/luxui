@@ -1,3 +1,4 @@
+import { RatePageComponent } from './ui/pages/rate-page/rate-page.component';
 import { IconButtonsPageComponent } from './elements/pages/icon-buttons-page/icon-buttons-page.component';
 import { ButtonsPageComponent } from './elements/pages/buttons-page/buttons-page.component';
 import { LinksPageComponent } from './elements/pages/links-page/links-page.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'settings/typography', component: TypographyComponent },
       { path: 'ui/pagination', component: PaginationPageComponent },
       { path: 'ui/tooltip', component: TooltipPageComponent },
+      { path: 'ui/rate', component: RatePageComponent },
       { path: 'ui/menu', component: MenuPageComponent },
       { path: 'elements/links', component: LinksPageComponent },
       { path: 'elements/buttons', component: ButtonsPageComponent },

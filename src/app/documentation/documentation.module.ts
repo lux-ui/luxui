@@ -1,3 +1,4 @@
+import { RateModule } from './../luxui/lib/ui/rate/rate.module';
 import { MenuItemModule } from './../luxui/lib/ui/menu/menu-item/menu-item.module';
 import { MenuModule } from './../luxui/lib/ui/menu/menu.module';
 import { RouterModule } from '@angular/router';
@@ -16,6 +17,7 @@ import { TooltipPageComponent } from './ui/pages/tooltip-page/tooltip-page.compo
 import { ButtonsPageComponent } from './elements/pages/buttons-page/buttons-page.component';
 import { LinksPageComponent } from './elements/pages/links-page/links-page.component';
 import { IconButtonsPageComponent } from './elements/pages/icon-buttons-page/icon-buttons-page.component';
+import { RatePageComponent } from './ui/pages/rate-page/rate-page.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { IconButtonsPageComponent } from './elements/pages/icon-buttons-page/ico
     ButtonsPageComponent,
     LinksPageComponent,
     IconButtonsPageComponent,
+    RatePageComponent,
   ],
   imports: [
     DocumentationRoutingModule,
@@ -38,6 +41,7 @@ import { IconButtonsPageComponent } from './elements/pages/icon-buttons-page/ico
     MenuModule,
     RouterModule,
     MenuItemModule,
+    RateModule,
   ],
 })
 export class DocumentationModule {}
